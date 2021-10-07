@@ -13,8 +13,9 @@ body {
 
 .wrapper {
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background-color: #fff;
     width: 375px;
     border-radius: 15px;
@@ -122,9 +123,95 @@ p {
     text-align: center;
     color: hsl(214, 17%, 51%);
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .switch_btn.active {
     background-color: hsl(214, 17%, 51%);
     color: #fff;
+}
+
+@media(min-width: 1440px) {
+
+    .wrapper {
+        width: 900px;
+        height: 250px;
+        display: flex;
+        overflow: initial;
+    }
+
+    .banner {
+        width: auto;
+        height: 100%;
+        border-radius: 15px 0 0 15px;
+    }
+
+    section {
+        padding: 30px 35px 25px 35px;
+        position: initial;
+    }
+
+
+    .text,
+    .title {
+        line-height: 22px;
+    }
+
+
+
+    .user {
+        margin-left: 20px;
+    }
+
+
+    .popup {
+        display: none;
+        transition: 0.2s;
+    }
+
+
+    .popup.active {
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        left: inherit;
+        right: -100px;
+        bottom: 75px;
+        width: 320px;
+        height: 70px;
+        padding: 20px 50px;
+        border-radius: 15px;
+        animation: appear 0.2s;
+    }
+
+    .popup.active::after {
+
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+
+    }
+
+
+
+    .switch_btn {
+        margin-left: 240px;
+
+    }
+
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
