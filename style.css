@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 375px;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+
+.banner {
+    width: 100%;
+}
+
+section {
+    padding: 50px 35px 25px 35px;
+    position: relative;
+}
+
+.title,
+.name {
+    font-size: 19px;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+
+
+.date,
+.name {
+    line-height: 24px;
+}
+
+p {
+    color: hsl(214, 17%, 51%);
+}
+
+.text {
+    margin: 20px 0;
+
+}
+
+.share_section {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user {
+    margin-left: 10px;
+}
+
+.popup {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    bottom: -100px;
+    left: -10%;
+    width: 120%;
+    height: 100px;
+    background-color: hsl(217, 19%, 35%);
+    padding: 35px 70px;
+    transition: 0.2s;
+}
+
+.popup.active {
+    bottom: 0;
+}
+
+.share {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+
+.icon {
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+.fab {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.switch {
+    flex-grow: 1;
+    align-self: center;
+    text-align: right;
+}
+
+.switch_btn {
+    position: relative;
+    z-index: 2;
+    margin-left: 40px;
+    background-color: hsl(210, 46%, 95%);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: hsl(214, 17%, 51%);
+    cursor: pointer;
+}
+
+.switch_btn.active {
+    background-color: hsl(214, 17%, 51%);
+    color: #fff;
+}
